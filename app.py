@@ -1,19 +1,11 @@
 import streamlit as st
 from fastai.vision.all import *
 import plotly.express as px
-import pathlib
-import platform 
-
-temp=pathlib.PosixPath
-pathlib.PosixPath=pathlib.WindowsPath
 
 model_path = st.text_input("Model Path", "Objects.pkl")  # User-specified model path
 
-st.title("Obyektni klassifikatsiya qiluvchi model")
-st.title("""Ular:
-    1.To'p
-    2.Velosiped
-    3.Telefon""")
+st.title("Transportni klassifikatsiya qiluvchi model")
+st.title("""Ular: 1.Mashinalar 2.Samalyotlar 3.Kemalar""")
 
 uploaded_image = st.file_uploader("Rasm yuklash", type=["png", "jpeg", "gif", "svg"])
 
